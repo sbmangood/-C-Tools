@@ -18,5 +18,52 @@
     <ClCompile Include="ywhTools.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="event.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chananel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="endpoint.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpChannel\tcp_channel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="toolsTest\testProtocol\testProtocal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="toolsTest\test1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="eventDispatcher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="eventHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chananel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tcpChannel\tcpCleint\tcp_client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tcpChannel\tcp_channel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="toolsTest\testProtocol\testProtocal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
