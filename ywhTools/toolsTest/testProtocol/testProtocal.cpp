@@ -11,7 +11,7 @@ void PatsFixProtocal::decode_data(const unsigned char* data, unsigned int length
 
 void PatsFixProtocal::encode_data(std::vector<unsigned char>& buffer, int &send_len, std::queue<YWH_TOOLS::Any> &queue)
 {
-	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	buffer.clear();
 	YWH_TOOLS::Any msg;
 	std::cout << "queuesize = " << queue.size()<<std::endl;

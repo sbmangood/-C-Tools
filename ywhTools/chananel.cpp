@@ -14,6 +14,8 @@ namespace YWH_TOOLS
 		_send_thread = std::shared_ptr<std::thread>(new std::thread(std::bind(&IChannel::send_work, this)));
 		protocol_->addListener(IProtocol::EVENT_MSG_ARRIVED, &IChannel::handlerMsgDecoded, this);
 		protocol_->addListener(IProtocol::EVENT_MSG_CORRUPTED, &IChannel::handlerMsgCorrupted, this);
+		buffer.reserve(bufferDefaultSize);
+		
 	}
 
 	IChannel::~IChannel()

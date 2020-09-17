@@ -41,7 +41,11 @@ protected:
 	std::shared_ptr<std::thread> _send_thread;
 	Event send_event_;
 	std::vector<unsigned char> buffer;
+
+
 	const int waitTimeoutMs = 5000;
+	const int bufferDefaultSize = 4096;
+	
 
 };
 

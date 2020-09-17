@@ -33,6 +33,12 @@
     <ClCompile Include="toolsTest\testProtocol\testProtocal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="buffer\Buffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="newMarketTools\newMarketProtocal\NewMarketProtocal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="toolsTest\test1.h">
@@ -63,6 +69,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="toolsTest\testProtocol\testProtocal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer\Buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="newMarketTools\marketType\marketType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="newMarketTools\newMarketProtocal\NewMarketProtocal.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

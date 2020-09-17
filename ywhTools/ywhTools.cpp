@@ -7,7 +7,8 @@
 
 int main()
 {
-	testEndpointAndTcpChannel();
+	//testEndpointAndTcpChannel();
+	testDump();
 	system("pause");
 }
 	

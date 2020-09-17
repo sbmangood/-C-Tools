@@ -157,19 +157,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="buffer\Buffer.cpp" />
     <ClCompile Include="chananel.cpp" />
     <ClCompile Include="endpoint.cpp" />
     <ClCompile Include="event.cpp" />
+    <ClCompile Include="newMarketTools\newMarketProtocal\NewMarketProtocal.cpp" />
     <ClCompile Include="tcpChannel\tcp_channel.cpp" />
     <ClCompile Include="toolsTest\testProtocol\testProtocal.cpp" />
     <ClCompile Include="ywhTools.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="buffer\Buffer.h" />
     <ClInclude Include="chananel.h" />
     <ClInclude Include="endpoint.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="eventDispatcher.h" />
     <ClInclude Include="eventHandler.h" />
+    <ClInclude Include="newMarketTools\marketType\marketType.h" />
+    <ClInclude Include="newMarketTools\newMarketProtocal\NewMarketProtocal.h" />
     <ClInclude Include="protocol.h" />
     <ClInclude Include="tcpChannel\tcpCleint\tcp_client.h" />
     <ClInclude Include="tcpChannel\tcp_channel.h" />

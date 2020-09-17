@@ -19,6 +19,6 @@ public:
 	virtual void reset()override;
 
 private:
-	void parseMsgHeader(char flag, unsigned short onelen, unsigned short fiveLen, std::vector<char> &hearder);
+	void parseMsgHeaderOld(char flag, unsigned short onelen, unsigned short fiveLen, std::vector<char> &hearder);
 
 };
