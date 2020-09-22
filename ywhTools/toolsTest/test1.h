@@ -4,6 +4,7 @@
 #include "../tcpChannel/tcp_channel.h"
 #include "../newMarketTools/newMarketProtocal/NewMarketProtocal.h"
 #include "../newMarketTools/marketType/marketType.h"
+#include "../newMarketTools/newMarketConfig/newMarketConfig.h"
 using namespace YWH_TOOLS;
 std::shared_ptr<YWH_TOOLS::Endpoint>	tcpEndPoint=nullptr;
 
@@ -124,6 +125,14 @@ void testEndpointAndTcpChannel()
 	}
 
 	
+}
+
+void tesNewMarketConfig() 
+{
+	NewMarketConfig nm;
+	nm.getConfig();
+	std::cout << "useNewMarket:" << nm.conf.useNewMarket 
+		<< "  ip:"<<nm.conf.ip << " port:" << nm.conf.port << std::endl;
 }
 
 void testDump() {

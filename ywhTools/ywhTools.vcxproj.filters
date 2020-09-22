@@ -39,6 +39,12 @@
     <ClCompile Include="newMarketTools\newMarketProtocal\NewMarketProtocal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="log\log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="newMarketTools\marketType\MarketDepth\MarketDepth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="toolsTest\test1.h">
@@ -78,6 +84,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="newMarketTools\newMarketProtocal\NewMarketProtocal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="log\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="newMarketTools\newMarketConfig\newMarketConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="newMarketTools\marketType\MarketDepth\MarketDepth.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

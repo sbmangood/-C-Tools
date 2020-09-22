@@ -3,10 +3,10 @@
 #include <algorithm>
 
 
-//#include "../log/log.h"
+#include "../log/log.h"
 
 
-//static LOGGER logger = LoggerUtils::get_mutable_instance().getLogger("TraderServer.TcpChannel");
+static LOGGER logger = LoggerUtils::get_mutable_instance().getLogger("TraderServer.TcpChannel");
 
 TcpChannel::TcpChannel(std::shared_ptr<YWH_TOOLS::IProtocol> protocol, const std::string& ip, unsigned int port):
 	IChannel(protocol)
@@ -28,10 +28,12 @@ void TcpChannel::onConnection(const asio::error_code& ec)
     //!ec ? logger->info("connect sucess") : 
     //    logger->error("connect failed {}",ec.message().c_str());
 	if (!ec) {
-		std::cout << "connect sucess!\n";
+		
+		logger->debug("connect sucess!");
 	}
 	else {
-		std::cout << "connect failed! ," << ec.message().c_str() << std::endl;
+		logger->debug("connect failed! {}", ec.message().c_str());
+	
 	}
 
 	
@@ -42,7 +44,7 @@ void TcpChannel::onSendError(const asio::error_code& ec)
 {
     //logger->error("send message to ZDTradeCommunication failed, {}", ec.message().c_str());
     std::string  cmd="onSendError";
-	std::cout << "send message to ZDTradeCommunication failed," << ec.message().c_str() << std::endl;
+	logger->error("send message to ZDTradeCommunication failed,{}", ec.message().c_str());
 	isConnected_ = false;
 	connect_event_.set();
     this->dispatchMessage(YWH_TOOLS::IProtocol::EVENT_MSG_ARRIVED, YWH_TOOLS::Any(cmd));
@@ -53,10 +55,10 @@ void TcpChannel::onSendError(const asio::error_code& ec)
 
 void TcpChannel::onReciveError(const asio::error_code& ec)
 {
-    //logger->error("receive message from ZDTradeCommunication failed, {},code is {}", ec.message().c_str(),ec.value());
+    logger->error("receive message from ZDTradeCommunication failed, {},code is {}", ec.message().c_str(),ec.value());
 	std::string  cmd = "onSendError";
-	std::cout << "receive message from ZDTradeCommunication failed, " 
-		<< ec.message().c_str() << "code is" << ec.value() << std::endl;
+
+
     this->dispatchMessage(YWH_TOOLS::IProtocol::EVENT_MSG_ARRIVED, YWH_TOOLS::Any(cmd));
 	
 	isConnected_ = false;
@@ -83,7 +85,7 @@ bool TcpChannel::start()
 	*/
 	
 	auto tid = std::this_thread::get_id();
-	std::cout << "tid= " << tid << std::endl;
+	
 	connect(serverAddr_, port_);
 	
 	static int cnt = 1;
@@ -110,8 +112,8 @@ bool TcpChannel::send_data(const unsigned char* buffer, unsigned int size)
 {
 	if (!isConnected_)
 	{
-		//logger->error("Tcp socket is not connect!");
-		std::cout << "Tcp socket is not connect!\n";
+		logger->error("Tcp socket is not connect!");
+	
 		return false;
 	}
 	try
@@ -120,8 +122,8 @@ bool TcpChannel::send_data(const unsigned char* buffer, unsigned int size)
 	}
 	catch(...)
 	{
-		//logger->error("known err in send_data");
-		std::cout << "known err in send_data\n";
+		logger->error("known err in send_data");
+		
 	}
 	return true;
 }

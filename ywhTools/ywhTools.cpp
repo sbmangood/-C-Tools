@@ -8,7 +8,7 @@
 int main()
 {
 	//testEndpointAndTcpChannel();
-	testDump();
+	tesNewMarketConfig();
 	system("pause");
 }
 	

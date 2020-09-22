@@ -72,15 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,10 +113,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\HuPingAn180801\work\mywork\third_lib\TraderServer\Boost64\include\boost-1_67;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\HuPingAn180801\work\mywork\third_lib\TraderServer\Boost64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,12 +154,14 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\HuPingAn180801\work\mywork\third_lib\TraderServer\Boost64\include\boost-1_67;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\HuPingAn180801\work\mywork\third_lib\TraderServer\Boost64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -161,6 +169,8 @@
     <ClCompile Include="chananel.cpp" />
     <ClCompile Include="endpoint.cpp" />
     <ClCompile Include="event.cpp" />
+    <ClCompile Include="log\log.cpp" />
+    <ClCompile Include="newMarketTools\marketType\MarketDepth\MarketDepth.cpp" />
     <ClCompile Include="newMarketTools\newMarketProtocal\NewMarketProtocal.cpp" />
     <ClCompile Include="tcpChannel\tcp_channel.cpp" />
     <ClCompile Include="toolsTest\testProtocol\testProtocal.cpp" />
@@ -173,7 +183,10 @@
     <ClInclude Include="event.h" />
     <ClInclude Include="eventDispatcher.h" />
     <ClInclude Include="eventHandler.h" />
+    <ClInclude Include="log\log.h" />
+    <ClInclude Include="newMarketTools\marketType\MarketDepth\MarketDepth.h" />
     <ClInclude Include="newMarketTools\marketType\marketType.h" />
+    <ClInclude Include="newMarketTools\newMarketConfig\newMarketConfig.h" />
     <ClInclude Include="newMarketTools\newMarketProtocal\NewMarketProtocal.h" />
     <ClInclude Include="protocol.h" />
     <ClInclude Include="tcpChannel\tcpCleint\tcp_client.h" />
